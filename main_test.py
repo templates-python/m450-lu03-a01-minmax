@@ -1,24 +1,23 @@
-def test_random():
-    numbers = list()
-    # TODO: Rufe die Funktion "random_numbers" auf, speichere den Returnwert in einer Variable
-    # TODO: Übernimm die Ausgaben der Funktion
-    # TODO: Überprüfe ob die Ausgaben korrekt sind
-    print(f'{min(numbers)}\n{max(numbers)}\n')  # Diese Zeile ist als Hilfestellung gedacht
+from main import random_numbers, user_input
+
+
+def test_random(capsys):
+    numbers = random_numbers()
+    captured = capsys.readouterr()
+    assert captured.out == f'{min(numbers)}\n{max(numbers)}\n'
 
 
 def test_userinput_normal(capsys, monkeypatch):
-    # TODO: Erzeuge eine Liste mit mehreren Inputwerten
-    # TODO: Lege die erzeugte Liste als "Benutzereingaben" fest
-    # TODO: Führe die Funktion "user_input" aus
-    # TODO: Übernimm die Ausgaben der Funktion
-    # TODO: Überprüfe das Resultat
-    pass
+    inputs = iter([31, -7, 258, 4, 0])
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+    user_input()
+    captured = capsys.readouterr()
+    assert captured.out == f'-7\n258\n'
 
 
 def test_userinput_special(capsys, monkeypatch):
-    # TODO: Erzeuge eine Liste mit nur einem Inputwert
-    # TODO: Lege die erzeugte Liste als "Benutzereingaben" fest
-    # TODO: Führe die Funktion "user_input" aus
-    # TODO: Übernimm die Ausgaben der Funktion
-    # TODO: Überprüfe ob die Ausgaben korrekt sind
-    pass
+    inputs = iter([42, 0])
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+    user_input()
+    captured = capsys.readouterr()
+    assert captured.out == f'42\n42\n'
