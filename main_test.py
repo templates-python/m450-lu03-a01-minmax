@@ -1,5 +1,5 @@
 def test_random():
-    numbers = list()
+    numbers = []
     # TODO: Rufe die Funktion "random_numbers" auf, speichere den Returnwert in einer Variable
     # TODO: Übernimm die Ausgaben der Funktion
     # TODO: Überprüfe ob die Ausgaben korrekt sind
