@@ -1,0 +1,20 @@
+[
+  {
+    "name": "test_random",
+    "function": "test_random",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_userinput_normal",
+    "function": "test_userinput_normal",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_userinput_special",
+    "function": "test_userinput_special",
+    "timeout": 10,
+    "points": 1
+  }
+]
