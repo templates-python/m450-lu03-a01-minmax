@@ -1,9 +1,11 @@
 def test_random():
     numbers = []
     # TODO: Rufe die Funktion "random_numbers" auf, speichere den Returnwert in einer Variable
-    # TODO: Übernimm die Ausgaben der Funktion
+    # TODO: Prüfe die Anzahl der Zahlen
+    # TODO: Übernimm die Konsolen-Ausgaben der Funktion
     # TODO: Überprüfe ob die Ausgaben korrekt sind
     print(f'{min(numbers)}\n{max(numbers)}\n')  # Diese Zeile ist als Hilfestellung gedacht
+    assert False
 
 
 def test_userinput_normal(capsys, monkeypatch):
@@ -12,7 +14,7 @@ def test_userinput_normal(capsys, monkeypatch):
     # TODO: Führe die Funktion "user_input" aus
     # TODO: Übernimm die Ausgaben der Funktion
     # TODO: Überprüfe das Resultat
-    pass
+    assert False
 
 
 def test_userinput_special(capsys, monkeypatch):
@@ -21,4 +23,4 @@ def test_userinput_special(capsys, monkeypatch):
     # TODO: Führe die Funktion "user_input" aus
     # TODO: Übernimm die Ausgaben der Funktion
     # TODO: Überprüfe ob die Ausgaben korrekt sind
-    pass
+    assert False
